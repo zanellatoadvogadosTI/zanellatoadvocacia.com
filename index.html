@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zanellato Advocacia</title>
+  <meta name="description" content="Zanellato Sociedade Individual de Advocacia — escritório de advocacia em São Paulo, com atuação em direito do trabalho e direito previdenciário.">
+  <style>
+    :root {
+      --grafite: #373736;
+      --laranja: #ea5b0c;
+      --fundo: #ffffff;
+      --suave: #f5f4f2;
+      --texto: #2b2b2a;
+      --apagado: #5f5e5c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--texto);
+      background: var(--fundo);
+      line-height: 1.6;
+    }
+    .faixa { height: 6px; background: var(--laranja); }
+    header, main, footer { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+    header { padding-top: 40px; }
+    .marca { font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: var(--laranja); font-weight: 700; }
+    h1 { margin: 8px 0 0; font-size: 30px; line-height: 1.25; color: var(--grafite); }
+    main { padding-top: 24px; padding-bottom: 40px; }
+    main p { margin: 0 0 16px; }
+    .contato { background: var(--suave); border-radius: 8px; padding: 20px; margin-top: 24px; }
+    .contato h2 { margin: 0 0 12px; font-size: 18px; color: var(--grafite); }
+    .contato dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; }
+    .contato dt { font-weight: 600; color: var(--apagado); }
+    .contato dd { margin: 0; }
+    a { color: var(--laranja); }
+    footer {
+      border-top: 1px solid #e3e1de;
+      padding-top: 20px;
+      padding-bottom: 32px;
+      font-size: 14px;
+      color: var(--apagado);
+    }
+    footer p { margin: 0 0 4px; }
+    footer strong { color: var(--grafite); }
+    @media (max-width: 480px) {
+      h1 { font-size: 24px; }
+      .contato dl { grid-template-columns: 1fr; gap: 2px; }
+      .contato dd { margin-bottom: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="faixa"></div>
+
+  <header>
+    <div class="marca">Zanellato Advocacia</div>
+    <h1>Zanellato Sociedade Individual de Advocacia</h1>
+  </header>
+
+  <main>
+    <p>Escritório de advocacia em São Paulo, com atuação em direito do trabalho e direito previdenciário.</p>
+    <p>Atendemos trabalhadores e segurados do INSS na orientação sobre seus direitos e na condução dos processos.</p>
+
+    <section class="contato" aria-labelledby="titulo-contato">
+      <h2 id="titulo-contato">Contato</h2>
+      <dl>
+        <dt>Telefone</dt>
+        <dd><a href="tel:+5511911613368">+55 (11) 91161-3368</a></dd>
+        <dt>E-mail</dt>
+        <dd><a href="mailto:contato@zanellatoadvogados.com">contato@zanellatoadvogados.com</a></dd>
+        <dt>Endereço</dt>
+        <dd>Praça Sílvio Romero, 229, Andar 2, Sala 11 — Cidade Mãe do Céu, São Paulo – SP, CEP 03323-000</dd>
+        <dt>Site</dt>
+        <dd><a href="https://zanellatoadv.adv.br">zanellatoadv.adv.br</a></dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>ZANELLATO SOCIEDADE INDIVIDUAL DE ADVOCACIA</strong></p>
+    <p>CNPJ 33.328.308/0001-10 — OAB/SP 358015</p>
+    <p>Praça Sílvio Romero, 229, Andar 2, Sala 11 — Cidade Mãe do Céu, São Paulo – SP, CEP 03323-000</p>
+    <p>Telefone: +55 (11) 91161-3368 — E-mail: contato@zanellatoadvogados.com</p>
+  </footer>
+</body>
+</html>
