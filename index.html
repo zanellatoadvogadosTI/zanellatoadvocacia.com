@@ -3,86 +3,328 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zanellato Advocacia</title>
-  <meta name="description" content="Zanellato Sociedade Individual de Advocacia — escritório de advocacia em São Paulo, com atuação em direito do trabalho e direito previdenciário.">
+  <title>Zanellato Advocacia — Advocacia Trabalhista e Previdenciária em São Paulo</title>
+  <meta name="description" content="Zanellato Sociedade Individual de Advocacia (OAB/SP 358015, CNPJ 33.328.308/0001-10). Advocacia trabalhista e previdenciária em São Paulo: orientação sobre direitos do trabalhador e benefícios do INSS.">
+  <link rel="canonical" href="https://zanellatoadvocacia.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://zanellatoadvocacia.com/">
+  <meta property="og:title" content="Zanellato Advocacia — Trabalhista e Previdenciário">
+  <meta property="og:description" content="Orientação clara sobre os direitos do trabalhador e os benefícios do INSS, do primeiro atendimento ao fim do processo.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23373736'/%3E%3Cpath d='M18 18h28v6L27 40h19v6H18v-6l19-16H18z' fill='%23EA5B0C'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Zanellato Advocacia",
+    "legalName": "Zanellato Sociedade Individual de Advocacia",
+    "taxID": "33.328.308/0001-10",
+    "url": "https://zanellatoadvocacia.com/",
+    "telephone": "+55-11-91161-3368",
+    "email": "contato@zanellatoadvogados.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Praça Sílvio Romero, 229, Andar 2, Sala 11 - Cidade Mãe do Céu",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "postalCode": "03323-000",
+      "addressCountry": "BR"
+    },
+    "knowsAbout": ["Direito do Trabalho", "Direito Previdenciário"],
+    "sameAs": ["https://zanellatoadv.adv.br/"]
+  }
+  </script>
   <style>
     :root {
       --grafite: #373736;
-      --laranja: #ea5b0c;
+      --grafite-escuro: #2a2a29;
+      --laranja: #ea5b0c;          /* decorativo e texto grande */
+      --laranja-forte: #b84f0c;    /* botões e links: contraste AA sobre branco */
+      --laranja-claro: #f59a5e;    /* texto pequeno sobre o grafite */
       --fundo: #ffffff;
-      --suave: #f5f4f2;
+      --fundo-suave: #f6f5f3;
+      --borda: #e4e2de;
       --texto: #2b2b2a;
-      --apagado: #5f5e5c;
+      --texto-2: #5c5b58;
+      --sans: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      --titulo: "Manrope", "Public Sans", system-ui, sans-serif;
+      --largura: 1080px;
     }
     * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-      color: var(--texto);
-      background: var(--fundo);
-      line-height: 1.6;
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: var(--sans); color: var(--texto); background: var(--fundo); line-height: 1.65; font-size: 17px; }
+    a { color: var(--laranja-forte); }
+    .conteiner { max-width: var(--largura); margin: 0 auto; padding: 0 16px; }
+    h1, h2, h3 { font-family: var(--titulo); color: var(--grafite); line-height: 1.2; margin: 0; }
+
+    /* Topo */
+    .topo { border-bottom: 1px solid var(--borda); background: var(--fundo); }
+    .topo .conteiner { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; }
+    .marca { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--grafite); }
+    .marca-z { width: 34px; height: 34px; border-radius: 8px; background: var(--grafite); display: grid; place-items: center; flex: none; }
+    .marca-nome { font-family: var(--titulo); font-weight: 800; letter-spacing: .06em; font-size: 17px; line-height: 1.1; }
+    .marca-nome small { display: block; font-family: var(--sans); font-weight: 500; letter-spacing: 0; font-size: 12px; color: var(--texto-2); }
+    .menu { display: flex; align-items: center; gap: 24px; }
+    .menu a:not(.botao) { color: var(--texto); text-decoration: none; font-weight: 500; font-size: 15px; }
+    .menu a:not(.botao):hover { color: var(--laranja-forte); }
+
+    /* Botões */
+    .botao { display: inline-flex; align-items: center; justify-content: center; gap: 8px; white-space: nowrap; padding: 12px 22px; border-radius: 8px; font-weight: 600; font-size: 16px; text-decoration: none; border: 2px solid transparent; transition: background .15s, border-color .15s, color .15s; }
+    .botao-primario { background: var(--laranja-forte); color: #fff; }
+    .botao-primario:hover { background: #9e440a; }
+    .botao-claro { border-color: rgba(255,255,255,.55); color: #fff; }
+    .botao-claro:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+    .botao-contorno { border-color: var(--laranja-forte); color: var(--laranja-forte); }
+    .botao-contorno:hover { background: var(--laranja-forte); color: #fff; }
+    .botao:focus-visible, .menu a:focus-visible { outline: 3px solid var(--laranja-claro); outline-offset: 2px; }
+    .botao svg { width: 18px; height: 18px; flex: none; }
+
+    /* Destaque */
+    .destaque { background: var(--grafite); color: #f1f0ee; position: relative; overflow: hidden; }
+    .destaque::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--laranja); }
+    .destaque .conteiner { padding-top: 72px; padding-bottom: 72px; }
+    .rotulo { font-family: var(--titulo); font-weight: 700; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--laranja-claro); margin: 0 0 14px; }
+    .destaque h1 { color: #fff; font-size: 44px; max-width: 760px; }
+    .destaque h1 span { color: var(--laranja); }
+    .destaque p.lead { font-size: 19px; max-width: 640px; margin: 20px 0 32px; color: #dcdad6; }
+    .acoes { display: flex; flex-wrap: wrap; gap: 12px; }
+    .identidade { margin-top: 36px; font-size: 14px; color: #b9b7b2; }
+
+    /* Seções */
+    section.bloco { padding: 72px 0; }
+    section.bloco.suave { background: var(--fundo-suave); }
+    .cabeca { max-width: 680px; margin-bottom: 36px; }
+    .cabeca .rotulo { color: var(--laranja-forte); }
+    .cabeca h2 { font-size: 32px; }
+    .cabeca p { color: var(--texto-2); margin: 12px 0 0; }
+
+    .areas { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .area { background: var(--fundo); border: 1px solid var(--borda); border-radius: 12px; padding: 28px; border-top: 4px solid var(--laranja); }
+    .area h3 { font-size: 22px; margin-bottom: 8px; }
+    .area > p { color: var(--texto-2); margin: 0 0 16px; }
+    .area ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+    .area li { padding-left: 26px; position: relative; }
+    .area li::before { content: ""; position: absolute; left: 0; top: .55em; width: 14px; height: 8px; border-left: 2px solid var(--laranja-forte); border-bottom: 2px solid var(--laranja-forte); transform: rotate(-45deg); }
+
+    .passos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; counter-reset: passo; }
+    .passo { counter-increment: passo; padding-top: 8px; }
+    .passo::before { content: counter(passo, decimal-leading-zero); display: block; font-family: var(--titulo); font-weight: 800; font-size: 40px; color: var(--laranja); line-height: 1; margin-bottom: 12px; }
+    .passo h3 { font-size: 20px; margin-bottom: 6px; }
+    .passo p { margin: 0; color: var(--texto-2); }
+
+    .compromissos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .compromisso { background: var(--fundo); border: 1px solid var(--borda); border-radius: 12px; padding: 24px; }
+    .compromisso h3 { font-size: 18px; margin-bottom: 6px; }
+    .compromisso p { margin: 0; color: var(--texto-2); font-size: 16px; }
+
+    .contato { display: grid; grid-template-columns: 1.1fr .9fr; gap: 32px; align-items: start; }
+    .dados { margin: 0; display: grid; gap: 18px; }
+    .dados div { display: grid; gap: 2px; }
+    .dados dt { font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--texto-2); }
+    .dados dd { margin: 0; font-size: 18px; }
+    .cartao-contato { background: var(--grafite); color: #f1f0ee; border-radius: 12px; padding: 28px; }
+    .cartao-contato h3 { color: #fff; font-size: 22px; margin-bottom: 8px; }
+    .cartao-contato p { margin: 0 0 20px; color: #dcdad6; }
+    .cartao-contato .acoes { flex-direction: column; }
+    .cartao-contato .botao { width: 100%; }
+
+    /* Rodapé */
+    footer { background: var(--grafite-escuro); color: #c9c7c2; font-size: 15px; }
+    footer .conteiner { padding-top: 40px; padding-bottom: 40px; display: grid; gap: 6px; }
+    footer strong { color: #fff; font-family: var(--titulo); letter-spacing: .02em; }
+    footer a { color: var(--laranja-claro); }
+    footer p { margin: 0; }
+    footer .linha { height: 1px; background: #44443f; margin: 14px 0; }
+    footer .miudo { font-size: 13px; color: #a3a19c; }
+
+    @media (max-width: 860px) {
+      .menu a:not(.botao) { display: none; }
+      .destaque h1 { font-size: 34px; }
+      .areas, .contato { grid-template-columns: 1fr; }
+      .passos, .compromissos { grid-template-columns: 1fr; }
+      section.bloco { padding: 56px 0; }
+      .destaque .conteiner { padding-top: 56px; padding-bottom: 56px; }
     }
-    .faixa { height: 6px; background: var(--laranja); }
-    header, main, footer { max-width: 760px; margin: 0 auto; padding: 0 16px; }
-    header { padding-top: 40px; }
-    .marca { font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: var(--laranja); font-weight: 700; }
-    h1 { margin: 8px 0 0; font-size: 30px; line-height: 1.25; color: var(--grafite); }
-    main { padding-top: 24px; padding-bottom: 40px; }
-    main p { margin: 0 0 16px; }
-    .contato { background: var(--suave); border-radius: 8px; padding: 20px; margin-top: 24px; }
-    .contato h2 { margin: 0 0 12px; font-size: 18px; color: var(--grafite); }
-    .contato dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; }
-    .contato dt { font-weight: 600; color: var(--apagado); }
-    .contato dd { margin: 0; }
-    a { color: var(--laranja); }
-    footer {
-      border-top: 1px solid #e3e1de;
-      padding-top: 20px;
-      padding-bottom: 32px;
-      font-size: 14px;
-      color: var(--apagado);
+    @media (max-width: 420px) {
+      body { font-size: 16px; }
+      .destaque h1 { font-size: 29px; }
+      .cabeca h2 { font-size: 26px; }
+      .acoes .botao { width: 100%; }
+      .menu .botao { padding: 9px 14px; font-size: 14px; }
+      .marca-nome small { display: none; }
     }
-    footer p { margin: 0 0 4px; }
-    footer strong { color: var(--grafite); }
-    @media (max-width: 480px) {
-      h1 { font-size: 24px; }
-      .contato dl { grid-template-columns: 1fr; gap: 2px; }
-      .contato dd { margin-bottom: 10px; }
-    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
 </head>
 <body>
-  <div class="faixa"></div>
 
-  <header>
-    <div class="marca">Zanellato Advocacia</div>
-    <h1>Zanellato Sociedade Individual de Advocacia</h1>
+  <header class="topo">
+    <div class="conteiner">
+      <a class="marca" href="#inicio" aria-label="Zanellato Advocacia, início">
+        <span class="marca-z" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 64 64"><path d="M14 12h36v8L26 44h24v8H14v-8l24-24H14z" fill="#EA5B0C"/></svg>
+        </span>
+        <span class="marca-nome">ZANELLATO<small>Advocacia Trabalhista e Previdenciária</small></span>
+      </a>
+      <nav class="menu" aria-label="Seções">
+        <a href="#atuacao">Atuação</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#contato">Contato</a>
+        <a class="botao botao-primario" href="https://wa.me/5511911613368">Fale conosco</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <p>Escritório de advocacia em São Paulo, com atuação em direito do trabalho e direito previdenciário.</p>
-    <p>Atendemos trabalhadores e segurados do INSS na orientação sobre seus direitos e na condução dos processos.</p>
+  <main id="inicio">
+    <section class="destaque">
+      <div class="conteiner">
+        <p class="rotulo">Advocacia em São Paulo</p>
+        <h1>Seus direitos como trabalhador e como segurado do INSS, <span>explicados com clareza.</span></h1>
+        <p class="lead">A Zanellato Advocacia orienta trabalhadores e segurados do INSS sobre seus direitos e acompanha cada caso do primeiro atendimento ao fim do processo.</p>
+        <div class="acoes">
+          <a class="botao botao-primario" href="https://wa.me/5511911613368">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3Z"/></svg>
+            Conversar pelo WhatsApp
+          </a>
+          <a class="botao botao-claro" href="tel:+5511911613368">Ligar: (11) 91161-3368</a>
+        </div>
+        <p class="identidade">Zanellato Sociedade Individual de Advocacia · OAB/SP 358015 · CNPJ 33.328.308/0001-10</p>
+      </div>
+    </section>
 
-    <section class="contato" aria-labelledby="titulo-contato">
-      <h2 id="titulo-contato">Contato</h2>
-      <dl>
-        <dt>Telefone</dt>
-        <dd><a href="tel:+5511911613368">+55 (11) 91161-3368</a></dd>
-        <dt>E-mail</dt>
-        <dd><a href="mailto:contato@zanellatoadvogados.com">contato@zanellatoadvogados.com</a></dd>
-        <dt>Endereço</dt>
-        <dd>Praça Sílvio Romero, 229, Andar 2, Sala 11 — Cidade Mãe do Céu, São Paulo – SP, CEP 03323-000</dd>
-        <dt>Site</dt>
-        <dd><a href="https://zanellatoadv.adv.br">zanellatoadv.adv.br</a></dd>
-      </dl>
+    <section class="bloco" id="atuacao" aria-labelledby="titulo-atuacao">
+      <div class="conteiner">
+        <div class="cabeca">
+          <p class="rotulo">Áreas de atuação</p>
+          <h2 id="titulo-atuacao">Duas frentes, um mesmo cuidado com cada caso</h2>
+          <p>Atuamos nas questões que mais afetam a vida de quem trabalha: o que se recebe durante e ao fim do contrato, e a proteção do INSS quando o trabalho fica para trás.</p>
+        </div>
+        <div class="areas">
+          <article class="area">
+            <h3>Direito do Trabalho</h3>
+            <p>Para quem foi demitido, pediu demissão ou ainda trabalha e tem dúvidas sobre o que lhe é devido.</p>
+            <ul>
+              <li>Verbas rescisórias e FGTS</li>
+              <li>Horas extras e intervalos</li>
+              <li>Adicionais de insalubridade, periculosidade e noturno</li>
+              <li>Rescisão indireta</li>
+              <li>Assédio e dano moral no trabalho</li>
+              <li>Seguro-desemprego</li>
+            </ul>
+          </article>
+          <article class="area">
+            <h3>Direito Previdenciário</h3>
+            <p>Para quem precisa pedir, revisar ou recorrer de um benefício do INSS.</p>
+            <ul>
+              <li>Aposentadorias</li>
+              <li>Benefício por incapacidade (auxílio-doença)</li>
+              <li>Auxílio-acidente</li>
+              <li>BPC/LOAS para idosos e pessoas com deficiência</li>
+              <li>Pensão por morte</li>
+              <li>Revisão de benefícios</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bloco suave" id="como-funciona" aria-labelledby="titulo-como">
+      <div class="conteiner">
+        <div class="cabeca">
+          <p class="rotulo">Como funciona</p>
+          <h2 id="titulo-como">Do primeiro contato ao acompanhamento do processo</h2>
+        </div>
+        <div class="passos">
+          <div class="passo">
+            <h3>Atendimento</h3>
+            <p>Você conta o que aconteceu, por WhatsApp, telefone ou no escritório, e tira suas dúvidas com a equipe.</p>
+          </div>
+          <div class="passo">
+            <h3>Análise e documentos</h3>
+            <p>O escritório analisa o seu caso, explica os caminhos possíveis e orienta quais documentos reunir.</p>
+          </div>
+          <div class="passo">
+            <h3>Acompanhamento</h3>
+            <p>Com o caso em andamento, você é informado de cada etapa e tem a quem perguntar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bloco" aria-labelledby="titulo-compromissos">
+      <div class="conteiner">
+        <div class="cabeca">
+          <p class="rotulo">Nosso compromisso</p>
+          <h2 id="titulo-compromissos">Como trabalhamos</h2>
+        </div>
+        <div class="compromissos">
+          <div class="compromisso">
+            <h3>Linguagem clara</h3>
+            <p>Explicamos seus direitos sem juridiquês, para que você decida com segurança.</p>
+          </div>
+          <div class="compromisso">
+            <h3>Atendimento próximo</h3>
+            <p>Atendimento pelo WhatsApp, por telefone e no escritório, em São Paulo.</p>
+          </div>
+          <div class="compromisso">
+            <h3>Ética profissional</h3>
+            <p>Atuação conforme o Código de Ética e Disciplina da OAB, com sigilo sobre cada caso.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bloco suave" id="contato" aria-labelledby="titulo-contato">
+      <div class="conteiner">
+        <div class="cabeca">
+          <p class="rotulo">Contato</p>
+          <h2 id="titulo-contato">Fale com o escritório</h2>
+        </div>
+        <div class="contato">
+          <dl class="dados">
+            <div>
+              <dt>Telefone e WhatsApp</dt>
+              <dd><a href="tel:+5511911613368">+55 (11) 91161-3368</a></dd>
+            </div>
+            <div>
+              <dt>E-mail</dt>
+              <dd><a href="mailto:contato@zanellatoadvogados.com">contato@zanellatoadvogados.com</a></dd>
+            </div>
+            <div>
+              <dt>Endereço</dt>
+              <dd>Praça Sílvio Romero, 229, Andar 2, Sala 11<br>Cidade Mãe do Céu, São Paulo – SP<br>CEP 03323-000</dd>
+            </div>
+            <div>
+              <dt>Site oficial</dt>
+              <dd><a href="https://zanellatoadv.adv.br/">zanellatoadv.adv.br</a></dd>
+            </div>
+          </dl>
+          <div class="cartao-contato">
+            <h3>Tem dúvidas sobre o seu caso?</h3>
+            <p>Mande uma mensagem e a equipe do escritório responde pelo mesmo canal.</p>
+            <div class="acoes">
+              <a class="botao botao-primario" href="https://wa.me/5511911613368">Conversar pelo WhatsApp</a>
+              <a class="botao botao-claro" href="https://www.google.com/maps/search/?api=1&amp;query=Pra%C3%A7a+S%C3%ADlvio+Romero%2C+229%2C+S%C3%A3o+Paulo+SP+03323-000">Ver no mapa</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p><strong>ZANELLATO SOCIEDADE INDIVIDUAL DE ADVOCACIA</strong></p>
-    <p>CNPJ 33.328.308/0001-10 — OAB/SP 358015</p>
-    <p>Praça Sílvio Romero, 229, Andar 2, Sala 11 — Cidade Mãe do Céu, São Paulo – SP, CEP 03323-000</p>
-    <p>Telefone: +55 (11) 91161-3368 — E-mail: contato@zanellatoadvogados.com</p>
+    <div class="conteiner">
+      <p><strong>ZANELLATO SOCIEDADE INDIVIDUAL DE ADVOCACIA</strong></p>
+      <p>CNPJ 33.328.308/0001-10 · OAB/SP 358015</p>
+      <p>Praça Sílvio Romero, 229, Andar 2, Sala 11 — Cidade Mãe do Céu, São Paulo – SP, CEP 03323-000</p>
+      <p>Telefone: +55 (11) 91161-3368 · E-mail: <a href="mailto:contato@zanellatoadvogados.com">contato@zanellatoadvogados.com</a></p>
+      <div class="linha" role="presentation"></div>
+      <p class="miudo">© 2026 Zanellato Sociedade Individual de Advocacia. Todos os direitos reservados. Conteúdo informativo, nos termos do Código de Ética e Disciplina da OAB e do Provimento 205/2021.</p>
+    </div>
   </footer>
+
 </body>
 </html>
